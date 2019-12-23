@@ -1,0 +1,15 @@
+ID: josephmtasample
+_schema-version: '2.1'
+description: joseph first mta sample java app
+version: 0.0.1
+
+modules:
+ - name: cf_web_app
+   type: java
+   path: cf_web_app
+   parameters:
+      memory: 512M
+   provides:
+    - name: cf_web_app_api
+      properties:
+         url: ${default-url}
